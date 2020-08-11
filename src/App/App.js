@@ -1,5 +1,6 @@
 import React from "react";
-import Component from "../Component/Context";
+import Context from "../Component/Context";
+import ContextTwo from "../Component/ContextTwo";
 import ComponentContextProvider from "../Context/ComponentsContext";
 import "./App.css";
 
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <ComponentContextProvider>
-        <Component />
+        <Context />
+        <ContextTwo />
       </ComponentContextProvider>
     </div>
   );
