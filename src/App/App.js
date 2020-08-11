@@ -1,16 +1,14 @@
 import React from "react";
-import Context from "../Component/Context";
-import ContextTwo from "../Component/ContextTwo";
-import ComponentContextProvider from "../Context/ComponentsContext";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <ComponentContextProvider>
-        <Context />
-        <ContextTwo />
-      </ComponentContextProvider>
+      <h1>Upgrade my Skills on React</h1>
+      <Link to="context">
+        <button>Context Api</button>
+      </Link>
     </div>
   );
 }
