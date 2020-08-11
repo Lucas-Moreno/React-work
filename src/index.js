@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App/App";
 import * as serviceWorker from "./serviceWorker";
 import Context from "./Component/Context";
+import StyledComponents from "./Component/StyledComponents";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const Root = () => (
@@ -10,6 +11,7 @@ const Root = () => (
     <Switch>
       <Route exact path="/" component={App}></Route>
       <Route exact path="/context" component={Context}></Route>
+      <Route exact path="/styled" component={StyledComponents}></Route>
     </Switch>
   </BrowserRouter>
 );
