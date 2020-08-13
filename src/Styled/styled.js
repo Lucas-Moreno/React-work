@@ -116,6 +116,10 @@ export const BackButton = styled.button`
   position: absolute;
   bottom: 10px;
   right: 10px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 5px;
 `;
 
 export const NavButton = styled.button`
@@ -130,4 +134,9 @@ export const NavButton = styled.button`
     color: ${({ theme }) => theme.colors.white};
     border: 1px solid #f24738;
   }
+`;
+
+export const Nav = styled.div`
+  display: flex;
+  justify-content: center;
 `;

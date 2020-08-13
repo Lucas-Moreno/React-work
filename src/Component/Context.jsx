@@ -1,8 +1,8 @@
 import React from "react";
 import ContextOne from "../Component/ContextOne";
 import ContextTwo from "../Component/ContextTwo";
-import { Link } from "react-router-dom";
 import ComponentContextProvider from "../Context/ComponentsContext";
+import BackHomeButton from "./BackHomeButton";
 
 const Context = () => {
   return (
@@ -12,9 +12,7 @@ const Context = () => {
         <ContextOne />
         <ContextTwo />
       </ComponentContextProvider>
-      <Link to="/">
-        <button>Back to home</button>
-      </Link>
+      <BackHomeButton />
     </div>
   );
 };

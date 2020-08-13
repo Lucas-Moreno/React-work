@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../Theme/theme";
-import BackHomeButton from "../Component/BackHomeButton";
-import { NavButton } from "../Styled/styled";
+import { NavButton, Nav } from "../Styled/styled";
 
 function App() {
   return (
@@ -12,13 +11,14 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Title>Upgrade my Skills on React</Title>
-        <Link to="context">
-          <NavButton>Context Api</NavButton>
-        </Link>
-        <Link to="styled">
-          <NavButton>Styled Components</NavButton>
-        </Link>
-        <BackHomeButton />
+        <Nav>
+          <Link to="context">
+            <NavButton>Context Api</NavButton>
+          </Link>
+          <Link to="styled">
+            <NavButton>Styled Components</NavButton>
+          </Link>
+        </Nav>
       </div>
     </ThemeProvider>
   );
