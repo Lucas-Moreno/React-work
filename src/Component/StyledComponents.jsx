@@ -14,6 +14,7 @@ import {
 } from "../Styled/styled";
 import { ThemeProvider } from "styled-components";
 import theme from "../Theme/theme";
+import BackHomeButton from "./BackHomeButton";
 
 const StyledComponents = () => {
   const [isShow, setIsShow] = useState(false);
@@ -41,9 +42,7 @@ const StyledComponents = () => {
         <LargeHello>LargeHello</LargeHello>
         <SendHello>SendHello</SendHello>
         <StopHello>StopHello</StopHello>
-        <Link to="/">
-          <button>Back to home</button>
-        </Link>
+        <BackHomeButton />
       </Container>
     </ThemeProvider>
   );

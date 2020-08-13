@@ -111,3 +111,23 @@ export const StopHello = styled(Hello)`
 export const Container = styled.div`
   border: ${({ theme }) => theme.borders.border};
 `;
+
+export const BackButton = styled.button`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+`;
+
+export const NavButton = styled.button`
+  color: white;
+  background: #229dff;
+  border: 1px solid #229dff;
+  margin-right: 1rem;
+  padding: 5px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.white};
+    border: 1px solid #f24738;
+  }
+`;

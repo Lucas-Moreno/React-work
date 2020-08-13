@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../Theme/theme";
+import BackHomeButton from "../Component/BackHomeButton";
+import { NavButton } from "../Styled/styled";
 
 function App() {
   return (
@@ -11,11 +13,12 @@ function App() {
         <GlobalStyle />
         <Title>Upgrade my Skills on React</Title>
         <Link to="context">
-          <button>Context Api</button>
+          <NavButton>Context Api</NavButton>
         </Link>
         <Link to="styled">
-          <button>Styled Components</button>
+          <NavButton>Styled Components</NavButton>
         </Link>
+        <BackHomeButton />
       </div>
     </ThemeProvider>
   );
