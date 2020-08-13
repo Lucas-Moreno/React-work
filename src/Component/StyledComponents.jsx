@@ -1,35 +1,52 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Title,
+  Text,
+  Box,
+  TestClick,
+  Hello,
+  LargeHello,
+  SendHello,
+  StopHello,
+  Message,
+  Container
+} from "../Styled/styled";
+import { ThemeProvider } from "styled-components";
+import theme from "../Theme/theme";
 
 const StyledComponents = () => {
+  const [isShow, setIsShow] = useState(false);
+
+  const toggle = () => {
+    setIsShow(!isShow);
+  };
   return (
-    <div>
-      <Title>Hello</Title>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Title>Hello</Title>
+        <Text color="red">Red text</Text>
+        <Text>Default text</Text>
+        <Message>
+          Vous avez 126 mails non lus dans votre boîte de réception
+        </Message>
+        <Message success>Votre message a bien été envoyé.</Message>
+        <Message error>
+          Une erreur est survenue, votre message n'a pas été envoyé.
+        </Message>
+        <Box centerXY></Box>
+        {isShow ? <TestClick primary></TestClick> : <TestClick></TestClick>}
+        <button onClick={toggle}>Click</button>
+        <Hello>Hello</Hello>
+        <LargeHello>LargeHello</LargeHello>
+        <SendHello>SendHello</SendHello>
+        <StopHello>StopHello</StopHello>
+        <Link to="/">
+          <button>Back to home</button>
+        </Link>
+      </Container>
+    </ThemeProvider>
   );
 };
 
 export default StyledComponents;
-
-/* Styled Component with hover/media */
-
-const Title = styled.h1`
-  display: block;
-  width: 18rem;
-  margin: 4rem auto;
-  padding: 1rem;
-  font-size: 1.4rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: #65c3ba;
-  border: 1px solid #65c3ba;
-
-  :hover {
-    border: 1px solid red;
-    color: red;
-  }
-
-  @media screen and (min-width: 769px) {
-    font-size: 1.2rem;
-  }
-`;

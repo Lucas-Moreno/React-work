@@ -1,20 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import theme from "../Theme/theme";
 
 function App() {
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Title>Upgrade my Skills on React</Title>
-      <Link to="context">
-        <button>Context Api</button>
-      </Link>
-      <Link to="styled">
-        <button>Styled Components</button>
-      </Link>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <GlobalStyle />
+        <Title>Upgrade my Skills on React</Title>
+        <Link to="context">
+          <button>Context Api</button>
+        </Link>
+        <Link to="styled">
+          <button>Styled Components</button>
+        </Link>
+      </div>
+    </ThemeProvider>
   );
 }
 
